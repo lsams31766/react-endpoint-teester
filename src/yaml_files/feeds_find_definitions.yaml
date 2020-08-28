@@ -1,0 +1,20 @@
+---
+# Get feed definitions
+service: feed
+endpoint: /feed_definitions/find
+app: marvel
+role: external
+body:
+  {
+      "filter_fields": {
+      "id": [
+        "b0da712b-59d8-4a93-9527-a51ad1c58da6",
+        "0a3ae8d3-8064-41d0-8e7a-b6407f75d27e",
+        "62c57a23-1922-47d8-b6ad-59834e795055"
+        ]
+      },
+    "select_fields":["root_post_count","reply_post_count"]
+   }
+ParsedResponse:
+  data:  
+...

@@ -1,0 +1,20 @@
+---
+# Update articles from CabooseArticles
+service: article
+endpoint: /articles/update
+app: marvel
+body:
+  {
+    "filter_fields": {
+       "id": "ff042096-c45c-4de3-8621-a9518e30cff7",
+        "app": "marvel"
+    }, 
+    "update_fields": {
+      "status": "published",
+      "profile_tags":["Android","green_deal"],
+      "feed_id": "0a3ae8d3-8064-41d0-8e7a-b6407f75d27e"
+    }
+  }
+ParsedResponse:
+  articles: 
+...

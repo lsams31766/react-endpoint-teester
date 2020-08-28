@@ -1,0 +1,11 @@
+---
+# Get articles from CabooseArticles
+env: local
+service: articles
+endpoint: /articles/find_one
+app: marvel
+body:
+  {}
+ParsedResponse:
+  articles: 
+...

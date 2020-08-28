@@ -1,0 +1,19 @@
+---
+# Create widget from CabooseArticles
+service: article
+endpoint: /widgets
+app: marvel
+body:
+  [{
+      "sort":3,
+      "article_id": "ff042096-c45c-4de3-8621-a9518e30cff7",
+      "type": "link",
+      "data" : {
+        "text" : "the text string that represents this widgets body",
+        "url" : "www.abc.com",
+        "deeplink" : "missions:123"
+      }
+  }]
+ParsedResponse:
+  widgets:  
+...

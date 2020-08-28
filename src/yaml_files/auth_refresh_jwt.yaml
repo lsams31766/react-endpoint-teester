@@ -1,0 +1,15 @@
+---
+# Get refresh jwt
+service: auth
+endpoint: /auth/refresh_jwt
+app: baseball
+role: external
+body:
+  {
+    "refresh_token": PARAM_refresh_jwt
+  }
+ParsedResponse:
+  data: 
+    - jwt
+    - refresh_jwt
+...

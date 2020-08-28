@@ -1,0 +1,15 @@
+---
+# Get articles from CabooseArticles
+service: articles
+endpoint: /articles
+method: delete
+app: marvel
+body:
+  {
+    "filter_fields": {
+      "id": "35f124d7-a295-4c95-a374-89e3a92c0733"
+    }
+  }
+ParsedResponse:
+  articles: 
+...

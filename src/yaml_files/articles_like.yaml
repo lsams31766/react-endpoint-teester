@@ -1,0 +1,14 @@
+---
+# Like Article in CabooseArticles
+user: external
+service: articles
+endpoint: /articles/like
+app: starwars
+sub: eeb6c210-ae89-4bb7-946b-a756de2b47fb
+body:
+  {
+    "article_id": "b3c12e7d-a916-48dc-9dd5-ce7227e05359",
+  }
+ParsedResponse:
+  data:  
+...

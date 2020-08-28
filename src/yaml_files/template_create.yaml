@@ -1,0 +1,18 @@
+---
+# Create water_glasses from CabooseTemplates
+service: template
+endpoint: /water_glasses
+app: marvel
+body:
+  {
+      "height": 4,
+      "color": "gold",
+      "diameter": 1.2,
+      "description": "expensive",
+      "data": {"required": true}
+  }
+ParsedResponse:
+  water_glasses: 
+    - id
+    - color
+...

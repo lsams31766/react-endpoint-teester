@@ -1,0 +1,10 @@
+---
+# Get articles from CabooseArticles
+service: articles
+endpoint: /articles/find
+app: marvel 
+body:
+  {"filter_fields":{}}
+ParsedResponse:
+  articles: 
+...

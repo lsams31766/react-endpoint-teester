@@ -1,0 +1,8 @@
+---
+# Sequence, get user id, get wallet
+profiles_search_by_username: 
+  - replace: none 
+arcade_get_wallet: 
+# replace form previous id into next test profile_id
+  - id: profile_id
+...

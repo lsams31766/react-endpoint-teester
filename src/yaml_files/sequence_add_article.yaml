@@ -1,0 +1,18 @@
+---
+article_create_seq1:  
+  - save: article_create_results
+widget_create_seq2: 
+  - replace: article_id=article_create_results.id
+  - replace: type='deeplink'
+  - replace: sort='0'
+  - replace: "data={url: 'star_wars_pack1.html'}"
+widget_create_seq3: 
+  - replace: article_id=article_create_results.id
+  - replace: type='jpeg'
+  - replace: sort='1'
+  - replace: 'data={filename: "s3//topps/photos/vader.jpg"}'
+articles_like:
+  - replace: article_id=article_create_results.id
+articles_like2:
+  - replace: article_id=article_create_results.id
+...

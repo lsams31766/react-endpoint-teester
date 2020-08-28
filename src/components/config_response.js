@@ -1,5 +1,5 @@
 import React from 'react'
-import {Segment, Form, TextArea, Label} from 'semantic-ui-react'
+import {Segment, Form, TextArea, Label, Grid} from 'semantic-ui-react'
 
 const newLine = "\r\n";
 const text = '{' + newLine + '  "filter_fields":' + newLine +
@@ -9,10 +9,18 @@ const ConfigResponse = () => {
     return (
         <Segment>
         <Form>
-            <Label size='large'>Config</Label>
+            <Grid columns={1}>
+                <Grid.Row centered>
+                    <h3 size='large'>Config</h3>
+                </Grid.Row>
+            </Grid>
             <TextArea value={text} rows={10} placeholder='Config here'>
             </TextArea>
-            <Label size='large'>Response</Label>
+            <Grid columns={1}>
+                <Grid.Row centered>
+                    <h3 size='large'>Response</h3>
+                </Grid.Row>
+            </Grid>
             <TextArea  value={text} rows={10} placeholder='Response here'>
             </TextArea>
         </Form>

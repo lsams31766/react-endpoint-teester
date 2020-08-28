@@ -1,0 +1,15 @@
+---
+# Unlike Article in CabooseArticles
+user: external
+service: articles
+endpoint: /articles/for_profile
+app: marvel
+sub: 8182abd6-510e-4142-939d-0b64f8b2b109
+body:
+ {"page":1,"page_count":150,
+ "filter_fields":{},
+ "select_fields":{},"update_fields":{},"sorts":[]
+  }
+ParsedResponse:
+  articles:  
+...

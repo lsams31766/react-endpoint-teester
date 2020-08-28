@@ -1,0 +1,27 @@
+---
+# Unlike Article in CabooseArticles
+user: external
+service: articles
+endpoint: /articles/for_profile
+#app: disney
+app: marvel
+# starwars profile in prod
+#sub: eeb6c210-ae89-4bb7-946b-a756de2b47fb
+# disney profile in prod
+#sub: 765358be-8346-4822-96b9-862763809d4e
+# wwe in prod
+#sub: fd3d6ddb-2ee4-4589-b26b-7c6a3f3f03d7
+# marvel profile in qa
+#sub: 0db8aeb0-f716-4fb9-a380-f3eeb4e270db
+# marvel in dev
+sub: 1a97d58d-b0eb-4bd0-87a8-4632d99a8f15
+body:
+ #{"page":2,"page_count":2,"filter_fields":{},"select_fields":["title","publish_at","pin_start","pin_end","feed_id","widgets"],"update_fields":{},"sorts":[{"calculated_date": false}]
+#}
+#  {"page":2,"page_count":2,"filter_fields":{},"select_fields":[],"update_fields":{},"sorts":[{"calculated_date": false}]
+#  }
+  {"page":1,"page_count":10,"filter_fields":{},"select_fields":{},"update_fields":{},"sorts":[{"calculated_date": false}]
+  }
+ParsedResponse:
+  articles:  
+...

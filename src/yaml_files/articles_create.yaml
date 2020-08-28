@@ -1,0 +1,21 @@
+---
+# Create articles locally from CabooseArticles
+service: article
+endpoint: /articles
+app: marvel
+body:
+  [{
+      "app":"marvel",
+      "title": "Monday Article",
+      "author": "Larry",
+      "type": "Announcements",
+      "header_image": "You.jpeg",
+      "status": "draft",
+      "publish_at": "2018-09-07 12:15:37",
+      "profile_tags": ["ios","Monday"],
+      "enable_feed": true,
+      "show_likes": true
+  }]
+ParsedResponse:
+  articles:  
+...

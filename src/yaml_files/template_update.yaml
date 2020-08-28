@@ -1,0 +1,14 @@
+---
+# Update water_glasses from CabooseTemplates
+service: template
+endpoint: /water_glasses/update
+app: marvel
+body:
+  {
+    "filter_fields":{"id": "ac2c143d-8b88-4e5d-aa8b-ad63b0e7a987"}, 
+    "update_fields":{"color": "fucia"}
+  }
+ParsedResponse:
+  data: 
+    - count
+...

@@ -1,0 +1,20 @@
+---
+# Get user profile
+service: users
+endpoint: /profiles/find
+app: baseball
+role: external
+body:
+  {
+    "filter_fields": {
+      "user": {
+        "user_name": "JONES"
+      }
+    }
+  }
+ParsedResponse:
+  data:  
+    profiles: 
+      user:
+        
+...

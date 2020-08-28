@@ -1,0 +1,8 @@
+---
+# Sequence, get jwt, then call refresh_jwt
+auth_jwt: 
+  - replace: none 
+auth_refresh_jwt: 
+# replace form previous refresh_jwt into next test refresh_token
+  - refresh_jwt: refresh_token  
+...

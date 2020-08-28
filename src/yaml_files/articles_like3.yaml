@@ -1,0 +1,14 @@
+---
+# Like Article in CabooseArticles
+user: external
+service: articles
+endpoint: /articles/like
+app: marvel
+sub: 272c82a1-2f0d-4062-b40f-0d5422e8e129
+body:
+  {
+    "article_id": "1bb867d8-be63-4ecd-ad49-66718de7f37c"
+  }
+ParsedResponse:
+  data:  
+...

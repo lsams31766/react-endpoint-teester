@@ -1,0 +1,14 @@
+---
+# Get user profile
+service: users
+endpoint: /profiles/search_by_username
+app: baseball
+role: internal
+body:
+  {
+    "user_name": "SMITH"
+  }
+ParsedResponse:
+  data:  
+    profiles:  
+...

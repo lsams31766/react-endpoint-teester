@@ -1,0 +1,12 @@
+---
+# Get water_glasses from CabooseTemplates
+service: template
+endpoint: /water_glass/find
+app: marvel
+body:
+  filter_fields: {}
+ParsedResponse:
+  water_glasses: 
+    - id
+    - color
+...

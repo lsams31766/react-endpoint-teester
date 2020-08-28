@@ -1,0 +1,17 @@
+---
+# Create articles locally from CabooseArticles
+service: articles
+endpoint: /widgets
+app: starwars
+body:
+  [{
+      "sort":0,
+      "article_id": PARAM_id,
+      "type": "deep link",
+      "data" : {
+        "url" : "star_wars_pack1.html"
+      }
+  }]
+ParsedResponse:
+  widgets:  
+...

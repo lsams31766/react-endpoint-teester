@@ -1,0 +1,13 @@
+---
+# Arcade get_wallet
+service: arcade
+endpoint: /tbr/get_wallet
+app: marvel
+role: external
+body:
+    {
+    "profile_id": PARAM_id
+  }
+ParsedResponse:
+  data:   
+...

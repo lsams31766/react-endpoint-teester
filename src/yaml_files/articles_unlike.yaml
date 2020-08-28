@@ -1,0 +1,14 @@
+---
+# Unlike Article in CabooseArticles
+user: external
+service: articles
+endpoint: /articles/unlike
+app: marvel
+sub: 272c82a1-2f0d-4062-b40f-0d5422e8e129
+body:
+  {
+    "article_id": "1a17c9ca-00f3-452e-873d-009cf8436006",
+  }
+ParsedResponse:
+  data:  
+...

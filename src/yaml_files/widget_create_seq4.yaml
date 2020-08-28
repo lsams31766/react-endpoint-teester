@@ -1,0 +1,17 @@
+---
+# Create widgets from CabooseArticles
+service: articles
+endpoint: /widgets
+app: marvel
+body:
+  [{
+      "sort":1,
+      "article_id": PARAM_id,
+      "type": "deep link",
+      "data" : {
+        "url" : "star_wars_pack2.html"
+      }
+  }]
+ParsedResponse:
+  widgets:  
+...

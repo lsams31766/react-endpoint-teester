@@ -1,0 +1,19 @@
+---
+article_create_seq1: 
+  - save: article_create_results
+widget_create_seq2: 
+  - replace: article_id=article_create_results.id
+  - replace: type='text'
+  - replace: sort='0'
+  - replace: data= "{\"Welcome to the <b>new</b> and <i>improved</i> Topps Article System <sup>TM</sup><color=green>Hi Mom</color>. Ahem, I said <size=96>HI MOM</size>\"}"
+# qa_widget_create_seq3: 
+#   - replace: article_id=article_create_results.id
+#   - replace: type='image'
+#   - replace: sort='1'
+#   - replace: 'data={"filename": "s3//topps/photos/vader.png"}'
+# qa_widget_create_seq4: 
+#   - replace: article_id=article_create_results.id
+#   - replace: type='text'
+#   - replace: sort='2'
+#   - replace: 'data={"text": "This is the text widget body."}'
+...

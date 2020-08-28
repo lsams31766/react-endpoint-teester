@@ -1,0 +1,15 @@
+---
+# Get likers for Article in CabooseArticles
+user: external
+service: articles
+endpoint: /articles/likers
+app: marvel
+body:
+  {
+   "filter_fields": {
+    "id": "eac27175-62da-44ec-87f6-140916f7943b"
+   }
+  }
+ParsedResponse:
+  data:  
+...

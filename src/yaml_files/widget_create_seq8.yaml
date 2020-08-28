@@ -1,0 +1,18 @@
+---
+# Create widgets from CabooseArticles
+service: articles
+endpoint: /widgets
+app: marvel
+sub: 0db8aeb0-f716-4fb9-a380-f3eeb4e270db
+body:
+  [{
+      "sort":0,
+      "article_id": PARAM_id,
+      "type": "text",
+      "data" : {
+        "text" : "This is the text widget body."
+      }
+  }]
+ParsedResponse:
+  widgets:  
+...

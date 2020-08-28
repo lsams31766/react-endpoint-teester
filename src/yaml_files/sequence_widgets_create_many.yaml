@@ -1,0 +1,31 @@
+---
+article_create_seq1:
+#local_article_create_seq1:
+  - replace: title='Daniel Test 1 Article' 
+  - replace: header_image='MyArticle.jpeg'
+  - replace: pin_start='2020-01-01 01:00:00'
+  - save: article_create_results
+# use create_generic_widget.yaml as base file, then replace as per below widgets
+array: 
+  - filename: create_generic_widget
+  - item_1: 
+    - replace: article_id=article_create_results.id
+    - replace: type='text'
+    - replace: sort='0'
+    - replace: {data:{"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida quis lorem ac lacinia. Sed scelerisque felis in nisl ultrices pretium. Proin mollis metus metus, non vehicula est iaculis et. Suspendisse sit amet dignissim lectus. Pellentesque viverra malesuada mauris quis consequat. In fringilla tellus lectus. Nam at sagittis purus. Vestibulum pellentesque sem dolor, id dignissim justo ultricies ut. Pellentesque commodo consectetur ipsum ut tincidunt. In hac habitasse platea dictumst. Phasellus dapibus ac purus non volutpat. In tellus ex, interdum id tempus quis, dictum quis purus. Suspendisse potenti. Sed ultricies lacus sed iaculis aliquam.\nDuis rhoncus erat ut sapien ornare, eget venenatis velit blandit. Nulla id ipsum pulvinar, vulputate arcu pulvinar, efficitur sapien. Vestibulum id porta velit, non bibendum leo. Suspendisse vulputate dolor augue. Proin ac arcu elit. Etiam cursus augue eu tellus porta finibus. Pellentesque vitae sagittis massa, in posuere odio. Suspendisse bibendum pretium est. Etiam tincidunt justo ac erat lacinia blandit. Fusce facilisis accumsan lobortis. Maecenas id ipsum sit amet eros luctus pretium. Nunc a arcu ultricies, scelerisque mauris congue, pretium metus. Vivamus eu sodales elit. Integer faucibus erat arcu, in lacinia neque aliquam vel. Aliquam sagittis massa nec leo pulvinar, ut bibendum mauris egestas. Pellentesque porta eget ex sed feugiat."}}
+  - item_2: 
+    - replace: article_id=article_create_results.id
+    - replace: type='image'
+    - replace: sort='1'
+    - replace: {data:{"title":"A Great Image","caption":"This is a great image.","url":"TheImage.gif"}}
+  - item_3: 
+    - replace: article_id=article_create_results.id
+    - replace: type='collectible_showcase'
+    - replace: sort='2'
+    - replace: {data:{"title":"Pack Release Alpha","caption":"This is the Alpha Pack Release","type":"set","collection_id":"collection:123"}}
+  - item_4: 
+    - replace: article_id=article_create_results.id
+    - replace: type='link'
+    - replace: sort='3'
+    - replace: {data:{"text":"Complete a Mission","url":"missions"}}
+...

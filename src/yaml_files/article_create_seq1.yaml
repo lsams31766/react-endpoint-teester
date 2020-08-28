@@ -1,0 +1,24 @@
+---
+# Create articles from CabooseArticles
+service: articles
+endpoint: /articles
+app: disney
+body:
+  [{
+      "app":"disney",
+      "title": "New Disney Pack",
+      "author": "Larry",
+      "type": "Packs",
+      "header_image": "Princess.jpeg",
+      "status": "draft",
+      "publish_at": "2020-09-07 12:15:37",
+      "enable_feed": true,
+      "show_likes": true,
+      "profile_tags":["Android","green_deal"],
+      "feed_id": "0a3ae8d3-8064-41d0-8e7a-b6407f75d27e"
+  }]
+ParsedResponse:
+  articles:
+    articles:
+      id:   
+...

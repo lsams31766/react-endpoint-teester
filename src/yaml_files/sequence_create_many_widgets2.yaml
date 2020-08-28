@@ -1,0 +1,40 @@
+---
+qa_article_create_seq1:
+#local_article_create_seq1:
+  - replace: title='Daniel Test 2 Article' 
+  - replace: header_image=''
+  - save: article_create_results
+# use create_generic_widget.yaml as base file, then replace as per below widgets
+array: 
+  - filename: create_generic_widget
+  - item_1: 
+    - replace: article_id=article_create_results.id
+    - replace: type='text'
+    - replace: sort='0'
+    - replace: {data:{"text":"Lorem Xipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida quis lorem ac lacinia."}}
+  - item_2: 
+    - replace: article_id=article_create_results.id
+    - replace: type='link'
+    - replace: sort='1'
+    - replace: {data:{"text":"This is an external website","url":"www.yahoo.com"}}
+  - item_3: 
+    - replace: article_id=article_create_results.id
+    - replace: type='text'
+    - replace: sort='2'
+    - replace: {data:{"text":"Suspendisse vulputate dolor augue. Proin ac arcu elit. Etiam cursus augue eu tellus porta finibus."}}
+  - item_4: 
+    - replace: article_id=article_create_results.id
+    - replace: type='link'
+    - replace: sort='3'
+    - replace: {data:{"text":"this is a link to the store","url":"store"}}
+  - item_5: 
+    - replace: article_id=article_create_results.id
+    - replace: type='link'
+    - replace: sort='4'
+    - replace: {data:{"text":"this is a link to the store","url":"store"}}
+  - item_6: 
+    - replace: article_id=article_create_results.id
+    - replace: type='image'
+    - replace: sort='5'
+    - replace: {data:{"title":"A great picture,caption:Who is this?","url":"file.funny.jpeg"}}
+...

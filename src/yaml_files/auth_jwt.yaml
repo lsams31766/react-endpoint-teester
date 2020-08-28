@@ -1,0 +1,16 @@
+---
+# Get JWT
+service: auth
+endpoint: /auth/jwt
+app: baseball
+role: external
+body:
+  {
+    "user_name": "CHANDLERSMITH"
+  }
+ParsedResponse:
+  data: 
+    - profile_id
+    - jwt
+    - refresh_jwt
+...

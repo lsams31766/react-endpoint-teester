@@ -1,0 +1,13 @@
+---
+# Get user profile find one
+service: users
+endpoint: /profiles/find_one
+app: baseball
+role: internal
+body:
+  {
+      "filter_fields": {"id": "b6e9dab7-4bb9-4e5b-9fd6-8e7b03f45d92"}
+  }
+ParsedResponse:
+  data:  
+...

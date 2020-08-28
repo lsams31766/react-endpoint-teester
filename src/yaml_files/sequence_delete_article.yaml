@@ -1,0 +1,8 @@
+---
+article_find_one:
+  - replace: filter_fields.title="New Star Wars Pack"
+  - save: article_find_results
+# use create_generic_widget.yaml as base file, then replace as per below widgets
+article_delete:
+  - replace: filter_fields.id=article_find_results.article.id
+...
