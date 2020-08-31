@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {Grid, Label, Dropdown, Checkbox, Segment, Button} from 'semantic-ui-react'
-import listReactFiles from 'list-react-files'
 /*
 const sweetArray = [2, 3, 4, 5, 35]
 const sweeterArray = sweetArray.map(sweetItem => {
@@ -13,7 +12,8 @@ class RunScript extends Component {
         super(props)
         this.state = {
             selected_script: null,
-            selected_env: null
+            selected_env: null,
+            scriptsDropdownItems: []
         }
     }
 
@@ -34,10 +34,33 @@ testScriptsArray = this.testScripts.map(scriptItem => {
             value: envItem,          
         }
     })
+    
+    updateFiles = (results) => {
+        console.log('fetch',results)
+        const yaml_file_names = results['files']
+        //const yaml_file_names = ['script1','script2']
+        const scriptsDropdownItems = yaml_file_names.map(scriptItem => {
+            return {
+                key: scriptItem,
+                text: scriptItem,
+                value: scriptItem,          
+            }
+        })
+        this.setState({ 
+            scriptsDropdownItems: scriptsDropdownItems,
+            selected_script: yaml_file_names[0]
+        })
+    }
 
     componentDidMount() {
-        this.setState({ 
-            selected_script: this.testScripts[0],
+        fetch('http://localhost:5000/yaml_config/get')
+            .then(response => response.json())
+            .then((results) => {
+              this.updateFiles(results)
+            }).catch(function(error) {
+                console.log(error);
+            })    
+        this.setState({
             selected_env: this.testEnvs[0]
         })
     }
@@ -52,6 +75,10 @@ testScriptsArray = this.testScripts.map(scriptItem => {
     }
 
     render() {
+        if (this.state.selected_script == null) {
+            return null
+        }
+
         return (
             <Segment>
             <Grid columns={1} padded>
@@ -65,12 +92,12 @@ testScriptsArray = this.testScripts.map(scriptItem => {
                         <h4>Script:</h4>
                     </Grid.Column>
                     <Grid.Column>
-                        <Dropdown className='small-list'
-                            placeholder='Script'  
-                            selection options={this.testScriptsArray}
+                       <Dropdown className='small-list'
+                            placeholder='Environment' 
+                            selection options={this.state.scriptsDropdownItems}
                             value = {this.state.selected_script}
                             onChange = {this.onDropdownChange('SCR')} 
-                        />
+                        />  
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered className='custom-no-padding'>
